@@ -18,13 +18,16 @@ jobs:
   # This workflow contains a single job called "build"
   job-1:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #runner
 
     steps:
 
       - name: Clone our code from github.
         uses: actions/checkout@v4
 
-
       - name: Show list of files.
         run: ls
+
+      - name: Show the content of the dockerfile.
+        run: cat Dockerfile
+        
